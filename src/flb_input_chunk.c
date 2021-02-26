@@ -635,7 +635,7 @@ static inline int flb_input_chunk_is_overlimit(struct flb_input_instance *i)
  * Check all chunks associated to the input instance and summarize
  * the number of bytes in use.
  */
-size_t flb_input_chunk_total_size(struct flb_input_instance *in)
+size_t flb_input_chunk_total_size_old(struct flb_input_instance *in)
 {
     ssize_t bytes;
     size_t total = 0;
@@ -660,7 +660,7 @@ size_t flb_input_chunk_total_size(struct flb_input_instance *in)
     return total;
 }
 
-size_t flb_input_chunk_total_size_fixed(struct flb_input_instance *in)
+size_t flb_input_chunk_total_size(struct flb_input_instance *in)
 {
     ssize_t bytes;
     size_t total = 0;
